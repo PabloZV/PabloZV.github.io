@@ -1,0 +1,227 @@
+
+
+html, body, #main_row, #supreme_container{
+  height: 100% !important;
+  min-height: 100% !important;
+
+}
+
+body {
+  padding-top: 86px;
+}
+
+footer{
+  display: none !important;
+}
+
+#sidebar{
+    margin-top: 86px;
+}
+
+#migas_brand{
+  font-size: 1.5rem;
+}
+
+#main_container{
+  min-height: 100% !important;
+}
+
+#screen{
+  pointer-events: none;
+  display: none;
+}
+
+
+/*Media queries de acuerdo a las dimensiones
+usadas en Bootstrap:*/
+
+@media (min-width: 576px) { 
+  body{
+    padding-top: 70px;
+  } 
+
+  #sidebar{
+    margin-top: 70px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  body{
+    padding-top: 70px;
+    padding-bottom: 60px !important;
+  } 
+
+  #main_container{
+      overflow: auto;
+      height: 0 !important;
+  }
+
+  #fondo_menu{
+    width: 100% !important;
+  }
+
+  #sidebar{
+    margin-top: 0px;
+  }
+
+  footer{
+    height: 60px !important;
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body{
+    padding-top: 62px;
+  } 
+}
+
+@media (min-width: 1200px) {
+  body{
+    padding-top: 62px;
+  } 
+}
+
+
+/*
+ * Off Canvas (Menu desplegable)
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767.5px) {
+
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-left {
+    left: -100%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -100%; /* 12 columns */
+  }
+
+  .row-offcanvas-left.active
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+
+  .row-offcanvas-left.active {
+    left: 0%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: fixed;
+    top: 0;
+    width: 75%; /* 6 columns */
+  }
+
+  #sidebar{
+    padding: 0px !important;
+    height: 100%;
+  	z-index: 3;
+    width: 100%;
+  }
+
+
+  #fondo_menu{
+    overflow: auto;
+    padding: 15px;
+    height: 100% !important;
+  }
+
+
+  #menu{
+    padding-bottom: 100px;
+  }
+
+
+  #container_padding{
+    height: 60px
+  }
+
+  #main_container{
+    z-index: 1;
+  }
+
+  #screen{
+    position: fixed;
+    z-index: 2;
+    display: block;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: background-color .25s ease-out;
+         -o-transition: background-color .25s ease-out;
+            transition: background-color .25s ease-out;
+  }
+
+  #screen.active{
+    background-color: rgba(0,0,0,0.5);
+  }
+
+
+}/*Fin media query Off Canvas*/
+
+
+@media screen and (min-width: 768px){
+
+  #sticky_nav{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
+
+}
+
+
+/*Elementos de las tarjetas de la pagina
+en la que se ven los pedidos:*/
+.order_information p{
+    margin: 0px;
+}
+
+.order_information p span{
+    font-weight: bold;
+}
+
+
+#div_boton_stock{
+  border-radius: 5px;
+}
+
+/*Colores y elementos para las marcas, especialmente
+para las paginas que tienen tablas y la pagina donde
+se editan los presios:*/
+.text-lipigas{
+    color: #FFC107;
+}
+
+.text-gasco{
+  color: #007BFF;
+}
+
+.text-abastible{
+    color: #DC3545;
+}
+
+.bg-lipigas{
+    background-color: #FFC107;
+}
+
+.bg-gasco{
+    background-color: #007BFF;
+}
+
+.bg-abastible{
+    background-color: #DC3545;
+}
+
+.divisor{
+  height: 2px;
+}

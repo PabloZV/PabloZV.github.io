@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#343a40" />
+
+	 <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<!-- Custom css -->
+	<link rel="stylesheet" type="text/css" href="../css/distribuidores_style.css">
+
+	<title>Editar datos</title>
+
+	
+
+</head>
+<body>
+	
+		<header>
+			<!-- As a link -->
+			<nav class="navbar navbar-dark bg-dark fixed-top migas_navbar">
+			  <button class="btn btn-primary d-md-none"  data-toggle="offcanvas">Menú</button>
+			  <a id="migas_brand" class="navbar-brand" href="#">MiGas</a>
+			  <form class="form-inline my-2 my-lg-0">
+		      <button id="migas_close_session_button" class="btn btn-primary my-2 my-sm-0" type="submit">cerrar sesión</button>
+		      </form>
+			 
+			</nav>
+
+			
+			
+		</header>
+
+		<div class="container-fluid" id= "supreme_container">
+			<div class="row" id= "main_row">
+				<div class="container col-md-3 pt-4 col-lg-2 row-offcanvas row-offcanvas-left sidebar-offcanvas" id="sidebar" data-toggle="offcanvas">
+
+					<div class="w-75 bg-white" id="fondo_menu">
+
+						<div id="div_boton_stock" class="bg-white mb-3">
+							<a href="actualizar_stock.html" class="btn btn-outline-success  btn-lg btn-block">Actualizar stock</a>
+						</div>
+						
+
+						<div class="list-group" id="menu">
+							<a href="principal.html" class="list-group-item list-group-item-action">Principal</a>
+							<a href="stock.html" class="list-group-item list-group-item-action">Stock</a>
+							<a href="ventas.html" class="list-group-item list-group-item-action">Ventas</a>
+							<a href="compras.html" class="list-group-item list-group-item-action">Compras</a>
+							<a href="estadisticas.html" class="list-group-item list-group-item-action">Estadísticas</a>
+							<a href="editar_precios.html" class="list-group-item list-group-item-action">Editar precios</a>
+							<a href="editar_datos.html" class="list-group-item active">Editar cuenta</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="screen"> </div>
+
+				<div id="main_container" class="container col col-md-9 col-lg-10 m-0 p-0 bg-white" >
+
+					<div id="form_div" class="px-3 px-md-4 pt-4 pb-4">
+						<h2 class="mb-4">Edita tus datos</h2>
+
+						<form id="formulario_editar_datos">
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Nombre empresa</label>
+									<input type="text" class="form-control" name="nombre_empresa" placeholder="Gas Juanito">
+								</div>
+
+								<div class="form-group col-md-6">
+									<label>Rut empresa</label>
+									<input type="text" class="form-control" name="rut_empresa" placeholder="11111111k" aria-describedby="ayuda_rut">
+									<small id="ayuda_rut" class="form-text text-muted">Rut no debe llevar puntos ni guión.</small>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Teléfono de la empresa</label>
+									<input type="text" class="form-control" name="telefono_empresa" placeholder="56912345678" aria-discibedby="ayuda_tel_empresa">
+									<small id="ayuda_tel_empresa" class="form-text text-muted">Teléfono de contacto para clientes.</small>
+								</div>
+								<div class="form-group col-md-6">
+									<label>Correo de la empresa</label>
+									<input type="text" class="form-control" name="correo_empresa" placeholder="gasjuanito@gmail.com">
+									<small id="ayuda_correo_empresa" class="form-text text-muted">Correo de contacto para clientes.</small>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Nombre del representante legal</label>
+									<input type="text" class="form-control" name="nombre_representante" placeholder="Juan Pablo Pérez Rosales" aria-describedby="ayuda_rut">
+									<small id="ayuda_nombre" class="form-text text-muted">Nombre completo.</small>
+								</div>
+
+								<div class="form-group col-md-6">
+									<label>Rut del representante</label>
+									<input type="text" class="form-control" name="rut_representante" placeholder="11111111k" aria-describedby="ayuda_rut">
+									<small id="ayuda_rut" class="form-text text-muted">Rut no debe llevar puntos ni guión.</small>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Teléfono del representante</label>
+									<input type="text" class="form-control" name="telefono_representante" placeholder="56915967548" aria-descirbedby="ayuda_tel_representante">
+									<small id="ayuda_tel_representante" class="form-text text-muted">Teléfono de contacto del representante.</small>
+								</div>
+								<div class="form-group col-md-6">
+									<label>Correo del representante</label>
+									<input type="text" class="form-control" name="correo_representante" placeholder="juan.rosales@gmail.com" aria-describedby="ayuda_correo_representante">
+									<small id="ayuda_correo_representante" class="form-text text-muted">Correo de contacto del representante.</small>
+
+								</div>
+							</div>
+
+							<h3 class="mt-4">Dirección de la empresa</h3>
+
+							<div class="row">
+								<div class="form-group col-md-6 col-lg-4">
+									<label>Comúna</label>
+									<select class="container custom-select d-block ">
+				  						<option disabled selected>Escoje tu comúna</option>
+				  						<option value="0">Alhué</option>
+										<option value="1">Buin</option>
+										<option value="2">Calera de Tango</option>
+										<option value="3">Cerrillos</option>
+										<option value="4">Cerro Navia</option>
+										<option value="5">Colina</option>
+										<option value="6">Conchalí</option>
+										<option value="7">Curacaví</option>
+										<option value="8">El Bosque</option>
+										<option value="9">El Monte</option>
+										<option value="10">Estación Central</option>
+										<option value="11">Huechuraba</option>
+										<option value="12">Independencia</option>
+										<option value="13">Isla de Maipo</option>
+										<option value="14">La Cisterna</option>
+										<option value="15">La Florida</option>
+										<option value="16">La Granja</option>
+										<option value="17">La Pintana</option>
+										<option value="18">La Reina</option>
+										<option value="19">Lampa</option>
+										<option value="20">Las Condes</option>
+										<option value="21">Lo Barnechea</option>
+										<option value="22">Lo Espejo</option>
+										<option value="23">Lo Prado</option>
+										<option value="24">Macul</option>
+										<option value="25">Maipú</option>
+										<option value="26">María Pinto</option>
+										<option value="27">Melipilla</option>
+										<option value="28">Ñuñoa</option>
+										<option value="29">Padre Hurtado</option>
+										<option value="30">Paine</option>
+										<option value="31">Pedro Aguirre Cerda</option>
+										<option value="32">Peñaflor</option>
+										<option value="33">Peñalolén</option>
+										<option value="34">Pirque</option>
+										<option value="35">Providencia</option>
+										<option value="36">Pudahuel</option>
+										<option value="37">Puente Alto</option>
+										<option value="38">Quilicura</option>
+										<option value="39">Quinta Normal</option>
+										<option value="40">Recoleta</option>
+										<option value="41">Renca</option>
+										<option value="42">San Bernardo</option>
+										<option value="43">San Joaquín</option>
+										<option value="44">San José de Maipo</option>
+										<option value="45">San Miguel</option>
+										<option value="46">San Pedro</option>
+										<option value="47">San Ramón</option>
+										<option value="48">Santiago</option>
+										<option value="49">Talagante</option>
+										<option value="50">Tiltil</option>
+										<option value="51">Vitacura</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6 col-lg-4">
+									<label>Calle</label>
+									<input type="text" class="form-control" name="calle" placeholder="Los alerces">
+								</div>
+
+								<div class="form-group col-md-6 col-lg-4">
+									<label>Número</label>
+									<input type="text" class="form-control" name="numero_calle" placeholder="5643">
+								</div>
+							</div>
+
+							<h3 class="mt-4">Comúnas de entrega</h3>
+
+							<div id="comunas_entrega">
+								<p id="mensaje_sin_comunas" class="text-secondary">No tienes comunas de entrega</p>
+							</div><!-- Fin div id="comunas_entrega"-->
+
+							<button type="button" id="btn_agregar_comuna" class="btn btn-sm btn-secondary mt-4">Agregar comúna</button>
+							
+							<button type="submit" id="boton_enviar_formulario" class="btn btn-primary btn-lg btn-block mt-4">Guardar cambios</button>	
+						</form>
+
+					</div><!--Fin div id="form_div"-->
+
+
+					<!-- Modal -->
+					<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalTitle" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="formModalTitle">Cambiar datos</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        ¿Estas seguro de realizar los cambios?
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					        <button type="button" id="boton_confirmar_formulario" class="btn btn-primary">Si, estoy seguro</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+					<!--Alert-->
+					<div id="alert_formulario" class="fixed-top d-none mt-5 mx-5 alert alert-success fade show" role="alert">
+					  <strong>Formulario enviado</strong>, sus datos han sido guardados.
+					  
+					</div>
+			
+				</div><!--Fin div id="main_container"-->
+			</div><!--Fin div class="row"-->
+		</div><!--Find div class="container-fluid"-->
+		
+		<footer class="container-fluid fixed-bottom  py-3 bg-dark text-center text-light">
+			<p>Contacto: servicios.mi.gas@gmail.com</p>
+		</footer>
+	
+
+	 <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="../javascript/offcanvas.js"></script>
+
+    <script src="../javascript/editar_datos.js"></script>
+</body>
+</html>
+
