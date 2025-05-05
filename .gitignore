@@ -1,2 +1,23 @@
-_site/
-.sass-cache/
+# Node, build, and deployment artifacts (if used later)
+node_modules/
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# macOS metadata
+._*
+
+# Optional: backups or local test files
+*.bak
+*.tmp
+*~
+

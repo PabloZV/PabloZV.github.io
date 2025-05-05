@@ -1,0 +1,389 @@
+* { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #1f2d3d;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+      background: linear-gradient(to bottom, #ffffff, #98b8d8);  /*#f0f4fa*/
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      border-bottom: 1px solid #e1e7ed;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 0.8px solid #3b7ddd;
+      margin-bottom: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #343e46;
+      margin-bottom: 1rem;
+      
+    }
+
+    .stack {
+      font-size: 0.9rem;
+      color: #010304;
+      margin-bottom: 1rem;
+    }
+
+    .btn,
+    .btn-outline {
+      padding: 12px 28px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 0.3rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn {
+      background-color: #3b7ddd;
+      color: white;
+      border: none;
+    }
+
+    .btn:hover {
+      background-color: #2a5fb2;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: white;
+      color: #3b7ddd;
+      border: 2px solid #3b7ddd;
+    }
+
+    .btn-outline:hover {
+      background-color: #f0f4fa;
+      transform: translateY(-1px);
+    }
+
+    .content {
+      background-color: #ffffff;  /* blanco si industry usa #f5f7fa */
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+      padding: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      max-width: 800px;
+    }
+
+    .content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: #2c3e50;
+    }
+
+
+    .content strong {
+      color: #1f2d3d;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6c7a89;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer a {
+      color: #3b7ddd;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+
+    .industry-section {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      padding: 0 1.5rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .industry-section h3 {
+      font-size: 1.6rem;
+      color: #f6f8fb;
+      margin-bottom: 2rem;
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .industry-card {
+      background: white;
+      border: 1px solid #dce3ec;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+      text-align: left;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease;
+    }
+    .industry-card.fade-in {
+
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .industry-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .industry-card.visible {
+      opacity: 1;
+      transform: translateY(0); /* ya no sube aún */
+      transition: transform 1.5s ease, box-shadow 0.3s ease;
+    }
+
+    .industry-card.visible:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .industry-card h4 {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .industry-card p {
+      font-size: 0.92rem;
+      color: #4b5b6a;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #005fa3;
+    }
+
+    .cta-card p,
+    .cta-card .cta-button {
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .contact-info a {
+      color: #3366cc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f5f7fa;
+      border-top: 1px solid #e0e0e0;
+      margin-top: auto;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a {
+      color: #3366cc;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+  /* === About (limpio, sin animación) === */
+  .about-section {
+    background-color: #f0f4fa;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto 0 auto;
+    border-top: 1px solid #dbe7f3;
+    border-bottom: 1px solid #dbe7f3;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-section p {
+    max-width: 780px;
+    margin: 0 auto 1.2rem;
+    font-size: 1rem;
+    color: #4a5a6a;
+    line-height: 1.7;
+  }
+
+  .about-section strong {
+    color: #1f2d3d;
+  }
+  /*PARTICLES*/
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #224261; /*#b61924;*/
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+  
+
+/* ajustar grapper de partticles*/
+.particles-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+#particles-js {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.industry-section {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.industry-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 4rem auto 2rem;
+}
+
+/*hero particles*/
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.hero .particles-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
