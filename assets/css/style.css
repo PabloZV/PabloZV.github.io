@@ -16,6 +16,8 @@
       background: linear-gradient(to bottom, #ffffff, #98b8d8);  /*#f0f4fa*/
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       border-bottom: 1px solid #e1e7ed;
+      position: relative; /*for particles*/
+      overflow: hidden; /*for particles*/
     }
 
     .profile-img {
@@ -346,20 +348,6 @@ canvas {
   pointer-events: auto;
 }
 
-#particles-js {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.industry-section {
-  position: relative;
-  z-index: 1;
-  background: transparent;
-}
-
 .industry-content {
   position: relative;
   z-index: 1;
@@ -369,12 +357,7 @@ canvas {
 
 /*hero particles*/
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding: 5rem 1.5rem 4rem;
-  text-align: center;
-}
+
 
 .hero .particles-wrapper {
   position: absolute;
